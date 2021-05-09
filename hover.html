@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        background: rgb(30, 30, 30);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      h1 span {
+        font-size: 2em;
+        color: white;
+        display: inline-flex;
+      }
+      h1 span:nth-child(2) {
+        color: rgb(3, 140, 23);
+        margin: 0 2rem 0 0;
+      }
+      h1 span:nth-child(odd) {
+        letter-spacing: -3rem;
+        overflow: hidden;
+        transition: 0.8s ease;
+      }
+      h1:hover span:nth-child(odd) {
+        letter-spacing: 2rem;
+      }
+      h1 i {
+        position: absolute;
+        top: 60%;
+        color: white;
+      }
+      h1 i::before {
+        font-size: 15px;
+        content: "Wanted";
+        margin: auto;
+        width: 100%;
+        position: absolute;
+        bottom: 130%;
+        transition: 1s;
+      }
+      h1:hover i::before {
+        opacity: 0;
+        letter-spacing: 3rem;
+      }
+      h1 i::after {
+        content: "The Most Wanted One";
+        visibility: hidden;
+        transition: 0.8s;
+        letter-spacing: 0;
+        font-size: 0;
+      }
+      h1:hover i::after {
+        letter-spacing: 2vw;
+        font-size: 25px;
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <span>P</span>
+      <span>y</span>
+      <span>thon</span>
+      <i></i>
+    </h1>
+  </body>
+</html>
